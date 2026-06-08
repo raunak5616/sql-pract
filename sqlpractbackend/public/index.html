@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Manager</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="page">
+        <section class="panel panel-list">
+            <div class="panel-header">
+                <p class="eyebrow">Live records</p>
+                <h1>Students</h1>
+                <p class="subtext">New students appear here as soon as they are added.</p>
+            </div>
+            <div id="studentList" class="student-list">
+                <p class="empty-state">Loading students...</p>
+            </div>
+        </section>
+
+        <section class="panel panel-form">
+            <div class="panel-header">
+                <p class="eyebrow">Add student</p>
+                <h2>Create a new record</h2>
+                <p class="subtext">Fill the form and save it to the database.</p>
+            </div>
+
+            <form id="studentForm" class="student-form">
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="name" placeholder="Enter student name" required>
+                </label>
+
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="Enter email" required>
+                </label>
+
+                <label>
+                    <span>Course</span>
+                    <input type="text" name="course" placeholder="Enter course" required>
+                </label>
+
+                <label>
+                    <span>Age</span>
+                    <input type="number" name="age" min="1" placeholder="Enter age" required>
+                </label>
+
+                <button type="submit">Save Student</button>
+                <p id="formMessage" class="form-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
